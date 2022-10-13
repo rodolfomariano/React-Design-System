@@ -1,13 +1,14 @@
+import { ButtonHTMLAttributes } from 'react'
 import clsx from 'clsx'
 import { GithubLogo, GoogleLogo, DiscordLogo } from "phosphor-react"
 
-export interface SocialButtonProps {
+export interface SocialButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'md' | 'lg' | 'full'
   variant?: 'outline' | 'solid' | 'link'
   socialMedia?: 'google' | 'github' | 'discord'
 }
 
-export function SocialButton({ size = 'sm', variant = 'solid', socialMedia = 'google' }: SocialButtonProps) {
+export function SocialButton({ size = 'sm', variant = 'solid', socialMedia = 'google', ...rest }: SocialButtonProps) {
   
   return (
     <button className={clsx(
@@ -38,6 +39,7 @@ export function SocialButton({ size = 'sm', variant = 'solid', socialMedia = 'go
           'border-0 py-0 px-0 text-yellow-500 hover:text-yellow-600 hover:underline': variant === 'link'
         }
       )}
+      {...rest}
     >
       { socialMedia === 'github' 
         ? (
