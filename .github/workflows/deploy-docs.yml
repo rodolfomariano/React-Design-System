@@ -19,7 +19,14 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+        run: |
+            if [ -e yarn.lock ]; then
+            yarn install --frozen-lockfile --legacy-peer-deps
+            elif [ -e package-lock.json ]; then
+            npm ci
+            else
+            npm ci --legacy-peer-deps
+            fi
 
       - name: Build Storybook
         run: npm run build-storybook
