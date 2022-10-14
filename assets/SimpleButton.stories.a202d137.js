@@ -1,0 +1,2 @@
+import{S as t}from"./SimpleButton.cbbebf51.js";import"./clsx.m.256e9345.js";import"./jsx-runtime.555ba0c8.js";import"./index.620d4eec.js";import"./iframe.1d6ea7ea.js";const r={title:"Components/SimpleButton",component:t,args:{children:"Simple Button",size:"full",variant:"solid"},argTypes:{size:{options:["sm","md","lg","full"],control:{type:"inline-radio"}},variant:{options:["outline","solid","link"],control:{type:"inline-radio"}}}},p={},s=["Default"];export{p as Default,s as __namedExportsOrder,r as default};
+//# sourceMappingURL=SimpleButton.stories.a202d137.js.map
