@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import { InputHTMLAttributes, ReactNode } from 'react'
 import { Slot } from '@radix-ui/react-slot'
-import { GithubLogo, GoogleLogo, DiscordLogo } from "phosphor-react"
 
 export interface TextInputLeftIconProps {
   children: ReactNode
